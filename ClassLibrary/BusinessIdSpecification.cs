@@ -38,18 +38,18 @@ namespace ClassLibrary
                     }
 
                     //laskettu tarkiste
-                    int calcedCheckSum = sum % 11;
+                    int calcedCheckNum = sum % 11;
                     //Jos jakojäännös on 0, tarkistusnumero on 0.
                     //Ei anneta tunnuksia, jotka tuottaisivat jakojäännöksen 1.
-                    if (calcedCheckSum == 1)
+                    if (calcedCheckNum == 1)
                         errors.Add("Tunnuksen tarkiste ei voi olla 1");
                     //Jos jakojäännös on 2..10, tarkistusnumero on 11 miinus jakojäännös. 
-                    else if (calcedCheckSum > 1)
-                        calcedCheckSum = 11 - calcedCheckSum;
+                    else if (calcedCheckNum > 1)
+                        calcedCheckNum = 11 - calcedCheckNum;
 
                     //tarkistetaan täsmääko annettu tarkiste laskettuun tarkisteeseen
-                    if (checkNum != calcedCheckSum)
-                        errors.Add($"Tunnuksen tarkiste ({checkNum}) ei täsmää laskettuun tarkisteeseen ({calcedCheckSum})");
+                    if (checkNum != calcedCheckNum)
+                        errors.Add($"Tunnuksen tarkiste ({checkNum}) ei täsmää laskettuun tarkisteeseen ({calcedCheckNum})");
                     else if (errors.Count == 0)
                         return true;
                 }

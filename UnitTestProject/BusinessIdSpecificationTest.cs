@@ -27,6 +27,7 @@ namespace UnitTestProject
             Assert.IsTrue(businessId.IsSatisfiedBy("8700875-1") == false && businessId.ReasonsForDisatisfaction.Count() > 0);
             Assert.IsTrue(businessId.IsSatisfiedBy("9700875-9") == false && businessId.ReasonsForDisatisfaction.Count() > 0);
             Assert.IsTrue(businessId.IsSatisfiedBy("18700875-9") == false && businessId.ReasonsForDisatisfaction.Count() > 0);
+            Assert.IsTrue(businessId.IsSatisfiedBy("6810385-85") == false && businessId.ReasonsForDisatisfaction.Count() > 0);
         }
     }
 }
